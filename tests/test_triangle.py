@@ -17,14 +17,14 @@ def test_triangle(a, b, c):
 @pytest.mark.parametrize('a,b,c', [(3, 4, 5), (3.04, 4.99, 7.3)])
 def test_perimeter(a, b, c):
     triangle = Triangle(a, b, c)
-    assert triangle.perimeter() == (a + b + c), "Неверный расчет периметра треугольника"
+    assert triangle.perimeter == (a + b + c), "Неверный расчет периметра треугольника"
 
 
 @pytest.mark.parametrize('a,b,c', [(3, 4, 5), (3.04, 4.99, 7.3)])
 def test_area(a, b, c):
     triangle = Triangle(a, b, c)
     hp = (a+b+c)/2
-    assert triangle.area() == math.sqrt(hp * (hp - a) * (hp - b) * (hp - c)), "Неверный расчет площади треугольника"
+    assert triangle.area == math.sqrt(hp * (hp - a) * (hp - b) * (hp - c)), "Неверный расчет площади треугольника"
 
 
 @pytest.mark.parametrize('add_figure', ['circle', 'rectangle', 'square'])
@@ -41,7 +41,7 @@ def test_add_area(add_figure):
         result = triangle.add_area(figure)
     else:
         raise ValueError("На сложение площадей передана некорректная геометрическая фигура")
-    assert result == triangle.area() + figure.area(), "Неверный расчет суммы площадей фигур"
+    assert result == triangle.area + figure.area, "Неверный расчет суммы площадей фигур"
 
 
 @pytest.mark.xfail(reason="negative tests")

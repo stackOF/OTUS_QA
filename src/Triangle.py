@@ -14,12 +14,11 @@ class Triangle(Figure):
             raise ValueError('Невозможно создать треугольник с такими сторонами: сумма двух сторон должна превышать '
                              'значение третьей стороны')
 
+    @property
     def area(self):
-        hp = self.perimeter() / 2
+        hp = self.perimeter / 2
         return math.sqrt(hp * (hp - self.side1) * (hp - self.side2) * (hp - self.side3))
 
+    @property
     def perimeter(self):
         return self.side1 + self.side2 + self.side3
-
-    def add_area(self, figure):
-        return self.area() + figure.area()

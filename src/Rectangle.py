@@ -7,11 +7,10 @@ class Rectangle(Figure):
         self.side2 = side2
         self.name = "rectangle"
 
+    @property
     def area(self):
         return self.side1*self.side2
 
+    @property
     def perimeter(self):
         return 2*(self.side1+self.side2)
-
-    def add_area(self, figure):
-        return self.area() + figure.area()

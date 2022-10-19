@@ -18,13 +18,13 @@ def test_circle(rad):
 @pytest.mark.parametrize('rad', [0, 5, 3.67])
 def test_circumference(rad):
     circle = Circle(rad)
-    assert circle.circumference() == 2 * math.pi * rad, "Неверный расчет длины окружности"
+    assert circle.circumference == 2 * math.pi * rad, "Неверный расчет длины окружности"
 
 
 @pytest.mark.parametrize('rad', [0, 5, 3.67])
 def test_area(rad):
     circle = Circle(rad)
-    assert circle.area() == math.pi * (rad ** 2), "Неверный расчет площади круга"
+    assert circle.area == math.pi * (rad ** 2), "Неверный расчет площади круга"
 
 
 @pytest.mark.parametrize('add_figure', ['triangle', 'rectangle', 'square'])
@@ -41,7 +41,7 @@ def test_add_area(add_figure):
         result = circle.add_area(figure)
     else:
         raise ValueError("На сложение площадей передана некорректная геометрическая фигура")
-    assert result == circle.area() + figure.area(), "Неверный расчет суммы площадей фигур"
+    assert result == circle.area + figure.area, "Неверный расчет суммы площадей фигур"
 
 
 @pytest.mark.xfail(reason="negative tests")

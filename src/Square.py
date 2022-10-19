@@ -6,11 +6,10 @@ class Square(Figure):
         self.side = side
         self.name = "square"
 
+    @property
     def area(self):
         return self.side**2
 
+    @property
     def perimeter(self):
         return self.side*4
-
-    def add_area(self, figure):
-        return self.area() + figure.area()
