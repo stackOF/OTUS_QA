@@ -7,11 +7,10 @@ class Circle(Figure):
         self.radius = radius
         self.name = "circle"
 
+    @property
     def area(self):
         return math.pi * (self.radius ** 2)
 
+    @property
     def circumference(self):
         return 2 * math.pi * self.radius
-
-    def add_area(self, figure):
-        return self.area() + figure.area()
