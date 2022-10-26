@@ -1,7 +1,7 @@
-from src.Circle import Circle
-from src.Square import Square
-from src.Rectangle import Rectangle
-from src.Triangle import Triangle
+from HW2.src.Circle import Circle
+from HW2.src.Square import Square
+from HW2.src.Rectangle import Rectangle
+from HW2.src.Triangle import Triangle
 import pytest
 
 
@@ -48,3 +48,4 @@ def test_create_rectangle_negative(a, b):
     rectangle = Rectangle(a, b)
     rectangle.is_number_value(a, b)
     rectangle.no_invalid_values(a, b)
+
