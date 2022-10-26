@@ -1,7 +1,7 @@
-from src.Circle import Circle
-from src.Square import Square
-from src.Rectangle import Rectangle
-from src.Triangle import Triangle
+from HW2.src.Circle import Circle
+from HW2.src.Square import Square
+from HW2.src.Rectangle import Rectangle
+from HW2.src.Triangle import Triangle
 import pytest
 import math
 
