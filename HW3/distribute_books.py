@@ -34,12 +34,10 @@ def distribute_books(users_list, books_list):
     num_users = 0
     for i in range(len(users_list)):
         users_list[i]["books"] = []
-    #final_user_books = []
     for book in books_list:
         users_list[num_users]["books"].append(book)
-        #final_user_books.append(copy.deepcopy(users_list[num_users]))
         num_users += 1
-        if num_users == len(users_list) -1:
+        if num_users == len(users_list) - 1:
             num_users = 0
     return users_list
 
